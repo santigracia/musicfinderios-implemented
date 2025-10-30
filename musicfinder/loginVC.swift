@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 import Mixpanel
 
+
 class loginVC : UIViewController {
     
     
@@ -40,9 +41,6 @@ class loginVC : UIViewController {
                         self.present(alert, animated: true, completion: nil)
                     }
                     else { // SUCCESS
-                        
-                        UserDefaults.standard.set(theEmail, forKey: "email")
-                        
                         let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
                         let vc : UIViewController = mainStoryboard.instantiateViewController(withIdentifier: "playerVC") as UIViewController
                         vc.modalPresentationStyle = .fullScreen

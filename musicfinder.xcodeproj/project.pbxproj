@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0AD6EBF8119CA3DA9FC04623 /* Pods_musicfinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01ECA5E180E556D3D6FD604D /* Pods_musicfinder.framework */; };
 		649DA26123371C28009D94AF /* songCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649DA26023371C28009D94AF /* songCell.swift */; };
+		64A2637F2EB3A78E00164282 /* Mixpanel in Frameworks */ = {isa = PBXBuildFile; productRef = 64A2637E2EB3A78E00164282 /* Mixpanel */; };
+		64A263822EB3B2A200164282 /* MixpanelSessionReplay in Frameworks */ = {isa = PBXBuildFile; productRef = 64A263812EB3B2A200164282 /* MixpanelSessionReplay */; };
 		64DAA69E231ED8890024A363 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DAA69D231ED8890024A363 /* AppDelegate.swift */; };
 		64DAA6A0231ED8890024A363 /* mainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DAA69F231ED8890024A363 /* mainVC.swift */; };
 		64DAA6A3231ED8890024A363 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64DAA6A1231ED8890024A363 /* Main.storyboard */; };
@@ -22,8 +23,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		01ECA5E180E556D3D6FD604D /* Pods_musicfinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_musicfinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		487F81089FA709B7813A2402 /* Pods-musicfinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-musicfinder.release.xcconfig"; path = "Target Support Files/Pods-musicfinder/Pods-musicfinder.release.xcconfig"; sourceTree = "<group>"; };
 		649DA26023371C28009D94AF /* songCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = songCell.swift; sourceTree = "<group>"; };
 		64DAA69A231ED8890024A363 /* musicfinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = musicfinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64DAA69D231ED8890024A363 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -37,7 +36,6 @@
 		64DAA6B3231F7C230024A363 /* loginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginVC.swift; sourceTree = "<group>"; };
 		64DAA6B523241C960024A363 /* playerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playerVC.swift; sourceTree = "<group>"; };
 		64DAA6B8232E0A4D0024A363 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
-		FFC597E9AB8EA2B16FEB1318 /* Pods-musicfinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-musicfinder.debug.xcconfig"; path = "Target Support Files/Pods-musicfinder/Pods-musicfinder.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,28 +43,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AD6EBF8119CA3DA9FC04623 /* Pods_musicfinder.framework in Frameworks */,
+				64A263822EB3B2A200164282 /* MixpanelSessionReplay in Frameworks */,
+				64A2637F2EB3A78E00164282 /* Mixpanel in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0AD108AD1CEA9474A9DB9439 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				01ECA5E180E556D3D6FD604D /* Pods_musicfinder.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		64DAA691231ED8890024A363 = {
 			isa = PBXGroup;
 			children = (
 				64DAA69C231ED8890024A363 /* musicfinder */,
 				64DAA69B231ED8890024A363 /* Products */,
-				DC8B3F4E9269C47C3EA522B0 /* Pods */,
-				0AD108AD1CEA9474A9DB9439 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,15 +94,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		DC8B3F4E9269C47C3EA522B0 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				FFC597E9AB8EA2B16FEB1318 /* Pods-musicfinder.debug.xcconfig */,
-				487F81089FA709B7813A2402 /* Pods-musicfinder.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -121,11 +101,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 64DAA6AC231ED88A0024A363 /* Build configuration list for PBXNativeTarget "musicfinder" */;
 			buildPhases = (
-				90AA98EFE4D8BABBCC99E6B8 /* [CP] Check Pods Manifest.lock */,
 				64DAA696231ED8890024A363 /* Sources */,
 				64DAA697231ED8890024A363 /* Frameworks */,
 				64DAA698231ED8890024A363 /* Resources */,
-				DC407CECE01AD5A7861637A3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -160,6 +138,10 @@
 				Base,
 			);
 			mainGroup = 64DAA691231ED8890024A363;
+			packageReferences = (
+				64A2637D2EB3A78E00164282 /* XCRemoteSwiftPackageReference "mixpanel-swift" */,
+				64A263802EB3B2A200164282 /* XCRemoteSwiftPackageReference "mixpanel-ios-session-replay-package" */,
+			);
 			productRefGroup = 64DAA69B231ED8890024A363 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -181,48 +163,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		90AA98EFE4D8BABBCC99E6B8 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-musicfinder-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DC407CECE01AD5A7861637A3 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-musicfinder/Pods-musicfinder-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-musicfinder/Pods-musicfinder-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-musicfinder/Pods-musicfinder-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		64DAA696231ED8890024A363 /* Sources */ = {
@@ -380,13 +320,12 @@
 		};
 		64DAA6AD231ED88A0024A363 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FFC597E9AB8EA2B16FEB1318 /* Pods-musicfinder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NF8ZGJHUK3;
 				INFOPLIST_FILE = musicfinder/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -401,14 +340,13 @@
 		};
 		64DAA6AE231ED88A0024A363 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 487F81089FA709B7813A2402 /* Pods-musicfinder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NF8ZGJHUK3;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = musicfinder/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -443,6 +381,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		64A2637D2EB3A78E00164282 /* XCRemoteSwiftPackageReference "mixpanel-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mixpanel/mixpanel-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		64A263802EB3B2A200164282 /* XCRemoteSwiftPackageReference "mixpanel-ios-session-replay-package" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mixpanel/mixpanel-ios-session-replay-package";
+			requirement = {
+				kind = exactVersion;
+				version = 1.1.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		64A2637E2EB3A78E00164282 /* Mixpanel */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 64A2637D2EB3A78E00164282 /* XCRemoteSwiftPackageReference "mixpanel-swift" */;
+			productName = Mixpanel;
+		};
+		64A263812EB3B2A200164282 /* MixpanelSessionReplay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 64A263802EB3B2A200164282 /* XCRemoteSwiftPackageReference "mixpanel-ios-session-replay-package" */;
+			productName = MixpanelSessionReplay;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 64DAA692231ED8890024A363 /* Project object */;
 }

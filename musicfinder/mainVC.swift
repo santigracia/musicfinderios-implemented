@@ -15,7 +15,6 @@ class mainVC : UIViewController {
         super.viewDidLoad()
         
         Mixpanel.mainInstance().track(event: "Main Screen", properties:["test": false])
-        
     }
     
 }

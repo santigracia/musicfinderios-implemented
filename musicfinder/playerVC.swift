@@ -20,11 +20,11 @@ class playerVC : UIViewController {
     @IBAction func switchPlan(_ sender: Any) {
         if UserDefaults.standard.string(forKey: "plan") == "Premium" {
             UserDefaults.standard.set("Free", forKey: "plan")
-            Mixpanel.mainInstance().track(event: "Downgrade")
+            Mixpanel.mainInstance().track(event: "Downgrade Plan")
         }
         else {
             UserDefaults.standard.set("Premium", forKey: "plan")
-            Mixpanel.mainInstance().track(event: "Upgrade")
+            Mixpanel.mainInstance().track(event: "Upgrade Plan")
         }
         checkPlan()
     }
@@ -34,7 +34,6 @@ class playerVC : UIViewController {
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
         Mixpanel.mainInstance().track(event: "Song Played")
-
     }
     
     @IBAction func buySong(_ sender: Any) {
@@ -42,7 +41,6 @@ class playerVC : UIViewController {
         alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
         Mixpanel.mainInstance().track(event: "Bought Song")
-
     }
     
     @IBAction func logoutBtn(_ sender: Any) {
@@ -61,7 +59,7 @@ class playerVC : UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        Mixpanel.mainInstance().track(event: "Player View")
+        Mixpanel.mainInstance().track(event: "View Player")
     }
     
 }

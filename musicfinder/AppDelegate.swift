@@ -8,6 +8,8 @@
 
 import UIKit
 import Mixpanel
+import MixpanelSessionReplay
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,16 +18,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-    
-       Mixpanel.initialize(token: "d1a82dc38adb1e0452f848867b67f9d2") //use your music finder project token
-       
-       //Mixpanel.mainInstance().identify(distinctId: "testuser3")
-
-       Mixpanel.mainInstance().useIPAddressForGeoLocation = true
         
+        Mixpanel.initialize(token: "5ea23af71cccdd315b0ca3159750383b", trackAutomaticEvents: true)  //use your test project token
+        Mixpanel.mainInstance().loggingEnabled = true
         
-//       Mixpanel.mainInstance().loggingEnabled = true
-//       Mixpanel.mainInstance().track(event: "App Started")
+        let config = MPSessionReplayConfig(wifiOnly: false, autoMaskedViews: [], enableLogging: true)
+                MPSessionReplay.initialize(
+                        token: Mixpanel.mainInstance().apiToken,
+                        distinctId: Mixpanel.mainInstance().distinctId,
+                        config: config
+        )
         
         return true
     }
